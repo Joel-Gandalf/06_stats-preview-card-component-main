@@ -42,24 +42,27 @@ main{
 .section1{
     width: 329px;
     height: 240px;
-    background-color: var(--Layer);
-    z-index: +1;
+    /* background-color: var(--Layer);
+    z-index: +1; */
 }
 .image{
-    width: 329px;
+    /* width: 329px; */
+    width: 100%;
     height: 240px;
     background-image: url(images/image-header-mobile.jpg);
-    background-size: contain;
+    /* background-size: contain; */
+    background-size: cover;
     /* background-color: var(--Layer); */
-    mix-blend-mode: multiply;
-    z-index: +2;
+    /* mix-blend-mode: multiply; */
+    /* z-index: +2; */
+    /* SI LO HAGO ASÍ HAY PROBLEMAS PQ mix-blend-mode MEZCLA TODAS LAS CAPAS ----NO CONSIGO QUE MEZCLE SÓLO LAS DOS QUE ME INTERESAN----- */
 }
-/* .layer{
-    width: 329px;
-    height: 240px;
+.layer{
+    width: 100%;
+    height: 100%;
     background-color: var(--Layer);
-    z-index: +1;
-} */
+    /* z-index: +1; */
+}
 
 /* ---------------------------SECTION2--------------------------- */
 
@@ -126,6 +129,7 @@ span{
     font-size: 11px;
     text-align: center;
     color: var(--Slightly_transparent_white2);
+    margin-bottom: 40px;
 }
 .attribution a {
     color: hsl(228, 45%, 44%);
@@ -133,11 +137,13 @@ span{
 
 /* ---------------------------VIEW 1440--------------------------- */
 
-@media only screen and (min-width:1024px) {
+@media only screen and (min-width:1200px) {
     main{
         width: 1109px;
         height: 446px;
         display: flex;
+        margin: 178px auto;
+        /* -----MIRAR-------------- */
     }
     .section1{
         width: 541px;

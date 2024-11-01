@@ -42,8 +42,8 @@ main{
 .section1{
     width: 329px;
     height: 240px;
-    /* background-color: var(--Layer);
-    z-index: +1; */
+    
+    /* isolation: isolate; */
 }
 .image{
     /* width: 329px; */
@@ -52,16 +52,27 @@ main{
     background-image: url(images/image-header-mobile.jpg);
     /* background-size: contain; */
     background-size: cover;
-    /* background-color: var(--Layer); */
-    /* mix-blend-mode: multiply; */
-    /* z-index: +2; */
+    /* z-index: 1; */
+    
+    /* background: var(--Layer) url(images/image-header-mobile.jpg);
+    background-blend-mode: multiply; */
+    
+    /* ---NO CONFUNDIR BACKGROUND-blend-mode CON MIX-blend-mode--- */
+        
+    /* ------MIX-BLEND-MODE mezcla colores de DIFERENTES elementos, contenidos unos dentro de otros--------*/
     /* SI LO HAGO ASÍ HAY PROBLEMAS PQ mix-blend-mode MEZCLA TODAS LAS CAPAS ----NO CONSIGO QUE MEZCLE SÓLO LAS DOS QUE ME INTERESAN----- */
+   
+    /* ----------------ESTE COMANDO SIRVE PARA AISLAR ELEMENTOS DE SUS CONTENEDORES------------ */
+    
+    /* isolation: isolate; */
 }
 .layer{
     width: 100%;
     height: 100%;
     background-color: var(--Layer);
-    /* z-index: +1; */
+    /* mix-blend-mode: multiply; */
+    
+    /* z-index: 2; */
 }
 
 /* ---------------------------SECTION2--------------------------- */
